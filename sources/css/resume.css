@@ -1,0 +1,492 @@
+
+.resume {
+    color: #6C40EB;
+    border-bottom: 3px solid #6C40EB;
+}
+
+#cv {
+    display: inline-block;
+    width: 100%;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+}
+
+.resume-nav {
+    list-style-type: none;
+    display: flex;
+    column-gap: 2.25rem;
+    row-gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.resume-nav li {
+    border: 3px solid black;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.resume-nav li:hover {
+    border: 3px solid #6C40EB;
+    background-color: #6C40EB;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Skills */
+
+section h2 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+section h3,
+section h4 {
+    font-size: 1.5rem;
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+section h3 {
+    margin: 1.5rem 0;
+}
+
+
+
+
+
+
+
+.skills-d {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 3.125rem;
+    margin-top: 1rem;
+}
+
+.circle-skill {
+    position: relative;
+    width: 8.75rem;
+    height: 8.75rem;
+    display: inline-block;
+    --percent: 75;
+    --circumference: 377;
+    --dashoffset: calc(var(--circumference) - var(--circumference) * var(--percent) / 100);
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+
+.ring-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 13;
+}
+
+.ring-base {
+    fill: none;
+    stroke: var(--clr);
+    stroke-width: 13;
+    stroke-linecap: round;
+    stroke-dasharray: var(--circumference);
+    stroke-dashoffset: var(--dashoffset);
+    transition: none;
+}
+
+/* 🔥 Эта — поверх и анимируется от 100% до 75% при наведении */
+.ring-anim {
+    fill: none;
+    stroke: var(--clr);
+    stroke-width: 13;
+    stroke-linecap: round;
+    stroke-dasharray: var(--circumference);
+    stroke-dashoffset: var(--circumference);
+    transition: stroke-dashoffset 1.5s;
+    pointer-events: none;
+    position: absolute;
+}
+
+.circle-skill:hover .ring-anim {
+    stroke-dashoffset: var(--dashoffset);
+}
+
+.circle-skill:hover .ring-base {
+    stroke: transparent;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #090514;
+    padding: 1rem;
+}
+
+.circle-shadow {
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;
+    box-shadow: inset 1px 2px 8px #38227ba9;
+}
+
+
+
+
+
+.skills-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    row-gap: 1rem;
+}
+
+.skills-c li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.25rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.coding-name {
+    width: 18.75rem;
+}
+
+.coding-perc {
+    width: 18.75rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.code-s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: var(--perc);
+    height: 100%;
+    background-color: var(--clr2);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.code-s2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a603b;
+    box-shadow: inset 0.7px 0.7px 0 #6b40eb63;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.coding-perc:hover .code-s {
+    animation: fillProgress 1.5s forwards;
+}
+
+@keyframes fillProgress {
+    0% {
+        width: 0%;
+        /* Стартовое значение */
+    }
+
+    100% {
+        width: var(--perc);
+        /* Конечное значение */
+    }
+}
+
+
+
+
+
+
+
+
+/* Education */
+
+
+
+
+/* Schools */
+
+.schools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+
+.school {
+    width: 18.75rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.school-img {
+    width: 18.75rem;
+    height: 18.75rem;
+    background-image: var(--url);
+    background-position: var(--pos);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 16px #09051480;
+}
+
+.size-contain {
+    background-size: contain;
+}
+
+.school-about p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.school-about span {
+    font-style: italic;
+    font-size: 0.875rem;
+}
+
+.date {
+    color: gray;
+}
+
+.faculty {
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.evo {
+    box-shadow: inset 0 0 8px rgba(29, 21, 56, 0.482);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Community Engagement */
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.act {
+    width: 100%;
+    height: 9.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 1rem;
+}
+
+.act-photo {
+    width: 20%;
+    height: 9.375rem;
+    background-image: var(--act);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.act-about {
+    width: 80%;
+}
+
+
+/* Work experience */
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.job {
+    display: flex;
+    column-gap: 1.5rem;
+    width: 100%;
+
+}
+
+.job-fon {
+    height: 20vh;
+    background-image: var(--fon);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: var(--size);
+    box-shadow: inset 0 0 16px #09051480;
+}
+
+.job-photo {
+    width: 30%;
+    background-image: var(--job);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 16px #09051480;
+}
+
+.job-about {
+    width: 70%;
+}
+
+.job-about p {
+    margin: 1rem 0;
+}
+
+.job-about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.job-about li {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.job-about li::before {
+    content: '✔';
+    /* можно заменить на '✔', '➤', '🌟', и т.д. */
+    position: absolute;
+    left: 0;
+    color: #6C40EB;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Languages */
+
+.langs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.lang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.5rem;
+    width: 100%;
+}
+
+.country{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.left-m{
+    margin-left: 0.6875;
+}
+
+.no-lm{
+    margin-left: -0.25rem;
+}
+
+.border-r{
+    border-radius: 9.375rem;
+}
+
+.lang img {
+    height: 3.75rem;
+}
+
+.lang img:hover{
+    transform: scale(1.2);
+}
+
+.progress {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #6C40EB;
+    border-radius: 6.25rem;
+    position: relative;
+    padding: 0 5px;
+    width: 40%;
+    height: 2.5rem;
+}
+
+.progress-value {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 1.875rem;
+    width: var(--value);
+}
+
+.progress:hover .progress-value {
+    animation: load 1.5s ease forwards;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--value);
+    }
+}
+
+
+
+
+.dark-mode .resume {
+    color: white;
+    border-bottom: 3px solid #6C40EB;
+}

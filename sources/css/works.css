@@ -1,0 +1,71 @@
+.selected-work {
+    color: #6C40EB;
+    border-bottom: 3px solid #6C40EB;
+}
+
+main {
+    padding-top: 20vh;
+}
+
+main h1 {
+    font-size: 6.25rem;
+}
+
+.main-p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.all-works {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    transition: 0.3s;
+    width: 19.375rem;
+    height: 25.625rem;
+}
+
+.works:hover {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+    box-shadow: 5px 5px #6C40EB;
+}
+
+.works-photo {
+    height: 60%;
+    border-bottom: 3px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.works-photo img {
+    width: 100%;
+}
+
+.works-text {
+    margin: 1rem 0.5rem;
+}
+
+.works-text .wts-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.dark-mode .selected-work {
+    color: white;
+    border-bottom: 3px solid #6C40EB;
+}

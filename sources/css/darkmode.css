@@ -1,0 +1,97 @@
+body.dark-mode {
+    background-color: #1c1b2e;
+    color: white;
+}
+
+.dark-mode .get-in-touch,
+.dark-mode .see-more,
+.dark-mode .btn-submit,
+.dark-mode #cv {
+    border: 3px solid white;
+}
+
+.dark-mode .get-in-touch:hover,
+.dark-mode .see-more:hover,
+.dark-mode .btn-submit:hover,
+.dark-mode #cv:hover {
+    border: 3px solid #6C40EB;
+}
+
+.dark-mode .work {
+    border: 3px solid white;
+}
+
+.dark-mode .work-photo {
+    border-bottom: 3px solid white;
+}
+
+.dark-mode #name,
+.dark-mode #email,
+.dark-mode #help {
+    border-bottom: 3px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.dark-mode #name:hover,
+.dark-mode #email:hover,
+.dark-mode #help:hover {
+    outline: none;
+    border-bottom: 3px solid #6C40EB;
+    box-shadow: 0 0 8px rgba(102, 115, 233, 0.71);
+}
+
+.dark-mode .social {
+    border: 4px solid white;
+}
+
+.dark-mode .social:hover {
+    border: 4px solid #6C40EB;
+    transform: scale(1.2);
+    background-color: #6C40EB;
+}
+
+.dark-mode .social img {
+    filter: invert();
+}
+
+
+
+
+
+
+
+/* Selected Work */
+
+.dark-mode .works {
+    border: 3px solid white;
+}
+
+.dark-mode .works-photo {
+    border-bottom: 3px solid white;
+}
+
+
+
+/* Resume */
+
+.dark-mode .resume-nav li {
+    border: 3px solid white;
+}
+
+.dark-mode .circle-text {
+    color: white;
+}
+
+.dark-mode .ring-bg{
+    stroke: rgba(255, 255, 255, 0.151);
+}
+
+.dark-mode .code-s2 {
+    background-color: rgba(255, 255, 255, 0.151);
+    box-shadow: inset 0.3px 0.3px 0 white;
+}
+
+.dark-mode .bg-color{
+    background-color: white;
+}

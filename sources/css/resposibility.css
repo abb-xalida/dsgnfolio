@@ -1,0 +1,195 @@
+
+
+
+@media only screen and (max-width: 1200px) {
+
+
+    /* Universal */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+
+
+
+
+    /* Navigation */
+
+    .logo {
+        display: none;
+    }
+
+    .switch {
+        margin-right: 40vw;
+    }
+
+    .right-side {
+        margin-right: 10vw;
+    }
+
+
+
+    /* Me */
+
+    .me h1 {
+        font-size: 3.125rem;
+    }
+
+    .me {
+        height: auto;
+        margin-bottom: 3.125rem;
+    }
+
+
+    /* Who is me */
+
+    .who-is-me {
+        flex-direction: column;
+        margin-top: 6.25rem;
+        height: auto;
+    }
+
+    .me-about {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .connect {
+        height: auto;
+        margin: 6.25rem 0;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .con-left {
+        width: 100%;
+    }
+
+    .con-right {
+        width: 100%;
+    }
+
+    #name,
+    #email,
+    #help {
+        width: 100%;
+    }
+
+
+
+
+    
+
+    /* Works Page */
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+
+
+    /* Resume Page */
+
+    section h2 {
+        font-size: 1.875rem;
+    }
+
+
+
+
+
+
+    /* .school */
+
+    .schools{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .school  {
+        height: 15rem;
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    /* To top */
+
+    #to-top {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+
+    /* Switch */
+
+    .switch {
+        margin-right: 5vw;
+    }
+
+
+    /* Work */
+
+    .work {
+        width: 100%;
+    }
+
+
+
+    /* Resume */
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    /* Switch */
+
+    .switch {
+        display: none;
+    }
+
+
+    /* Works Page */
+
+    .all-works {
+        flex-direction: column;
+    }
+
+    .works {
+        width: 100%;
+    }
+
+
+    /* Resume */
+    .job-photo {
+        display: none;
+    }
+
+    .job-about {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .me img {
+        box-sizing: content-box;
+        width: 100%;
+        height: auto;
+    }
+}
