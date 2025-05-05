@@ -181,7 +181,7 @@ nav a {
 
 .get-in-touch,
 .see-more,
-.btn-submit,
+.btn_submit,
 #cv {
     background-color: white;
     border: 3px solid black;
@@ -194,7 +194,7 @@ nav a {
 
 .get-in-touch:hover,
 .see-more:hover,
-.btn-submit:hover,
+.btn_submit:hover,
 #cv:hover {
     border: 3px solid #6C40EB;
     background-color: #6C40EB;
